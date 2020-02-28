@@ -1,0 +1,12 @@
+{% load trans from i18n %}
+{% load static from static %}
+
+{% block extrahead %}
+    <script src="{% url 'pokus1:javascript-catalog' %}"></script>
+        {# pokus1: is not required here but if we want write it then app_name must be in urls.py #}
+    <script src="{% static 'pokus1/js/helloworld.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% trans "Hello World!" %}
+{% endblock %}
